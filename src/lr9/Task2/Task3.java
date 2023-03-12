@@ -9,6 +9,12 @@ public class Task3 {
         byte num, sum = 0;
         boolean stop = false;
 
+        class CalculationOutOfRange extends Exception {
+            CalculationOutOfRange(String str) {
+                super(str);
+            }
+        }
+
         try {
             System.out.println("Вводите числа типа byte для вычисления их суммы. Введите 0, чтобы остановить ввод.");
             while (!stop) {
@@ -18,7 +24,7 @@ public class Task3 {
                     stop = true;
                 }
                 if (result > Byte.MAX_VALUE || result < Byte.MIN_VALUE) {
-                    throw new Exception("Значение суммы за границами диапазона типа byte");
+                    throw new CalculationOutOfRange("Значение суммы за границами диапазона типа byte");
                 }
                 sum = (byte) result;
             }
@@ -26,8 +32,8 @@ public class Task3 {
             System.out.println("Сумма введенных значений равна " + sum);
         } catch (InputMismatchException e) {
             System.out.println(e + " Введенно значение неверного типа.");
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (CalculationOutOfRange e) {
+            System.out.println(e.getMessage());
         } finally {
             in.close();
         }

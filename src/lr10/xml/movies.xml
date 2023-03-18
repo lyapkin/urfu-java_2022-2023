@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<movies>
+    <movie>
+        <title>Зеленая миля</title>
+        <director>Фрэнк Дарабонт</director>
+        <duration>189</duration>
+        <genres>
+            <genre>драма</genre>
+            <genre>фэнтези</genre>
+            <genre>криминал</genre>
+        </genres>
+    </movie>
+    <movie>
+        <title>Список Шиндлера</title>
+        <director>Стивен Спилберг</director>
+        <duration>195</duration>
+        <genres>
+            <genre>драма</genre>
+            <genre>биография</genre>
+            <genre>история</genre>
+            <genre>военный</genre>
+        </genres>
+    </movie>
+    <movie>
+        <title>Побег из Шоушенка</title>
+        <director>Фрэнк Дарабонт</director>
+        <duration>142</duration>
+        <genres>
+            <genre>драма</genre>
+        </genres>
+    </movie>
+</movies>

@@ -211,10 +211,8 @@ public class OneLinkedList {
     public String toStringRec(Node ref) {
         if (ref == null) return "";
 
-        String result = this.toStringRec(ref.next)
-                            .concat(ref.value + " ");
-
-        return result;
+        return this.toStringRec(ref.next)
+                   .concat(ref.value + " ");
     }
 
     public static void main(String[] args) {

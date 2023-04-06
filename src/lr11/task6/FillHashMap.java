@@ -18,9 +18,9 @@ public class FillHashMap {
         hashMap.put(9, "Салют");
         hashMap.put(31, "Дорога");
 
-        System.out.println("Строки с ключем > 5:");
         hashMap.forEach((key, value) -> {
-            if (key > 5) System.out.println(value);
+            if (key > 5) System.out.print("Строка с ключем > 5: " + value + "\n");
+            if (key == 0) System.out.println(String.join(", ", hashMap.values()));
             if (value.length() > 5) product *= key;
         });
 

@@ -1,7 +1,5 @@
 package lr11.task5;
 
-import lr11.task4.Node;
-
 public class HeadList {
     public Node head;
 

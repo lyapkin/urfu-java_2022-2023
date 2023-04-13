@@ -1,7 +1,6 @@
 package lr11.comparison;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Add {
     static int n = 11 * 1000000;

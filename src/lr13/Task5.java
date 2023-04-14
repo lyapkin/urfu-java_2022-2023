@@ -31,18 +31,9 @@ public class Task5 {
             final int index = i;
 
             Thread t = new Thread(() -> {
-                int max = arr[start];
-                for (int j = start + 1; j < end; j++) {
-                    max = Math.max(arr[j], max);
-                }
-
-                maxFromThreads[index] = max;
+                maxFromThreads[index] = Arrays.stream(arr, start, end)
+                                             .max().getAsInt();
             });
-
-//            Thread t = new Thread(() -> {
-//                maxFromThreads[index] = Arrays.stream(arr, start, end)
-//                                             .max().getAsInt();
-//            });
 
             threads[i] = t;
             t.start();

@@ -30,18 +30,9 @@ public class Task6 {
             final int index = i;
 
             Thread t = new Thread(() -> {
-                int sum = 0;
-                for (int j = start; j < end; j++) {
-                    sum += arr[j];
-                }
-
-                maxFromThreads[index] = sum;
+                maxFromThreads[index] = Arrays.stream(arr, start, end)
+                                             .sum();
             });
-
-//            Thread t = new Thread(() -> {
-//                maxFromThreads[index] = Arrays.stream(arr, start, end)
-//                                             .sum();
-//            });
 
             threads[i] = t;
             t.start();

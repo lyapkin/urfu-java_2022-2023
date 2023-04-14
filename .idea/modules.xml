@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/lr15/spring_hello_world/spring_hello_world.iml" filepath="$PROJECT_DIR$/src/lr15/spring_hello_world/spring_hello_world.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/lr15/spring_rest_service/spring_rest_service.iml" filepath="$PROJECT_DIR$/src/lr15/spring_rest_service/spring_rest_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/lr15/spring_rest_service_log/spring_rest_service_log.iml" filepath="$PROJECT_DIR$/src/lr15/spring_rest_service_log/spring_rest_service_log.iml" />
       <module fileurl="file://$PROJECT_DIR$/urfu-java_2022-2023.iml" filepath="$PROJECT_DIR$/urfu-java_2022-2023.iml" />
     </modules>
   </component>

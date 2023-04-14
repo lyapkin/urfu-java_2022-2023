@@ -1,3 +1,27 @@
 # Project exclude paths
 /out/
 *.iml
+/src/lr15/spring_hello_world/.gitignore
+/src/lr15/spring_rest_service/.gitignore
+/src/lr15/spring_rest_service_log/.gitignore
+/src/lr15/spring_hello_world/.mvn/wrapper/maven-wrapper.jar
+/src/lr15/spring_rest_service/.mvn/wrapper/maven-wrapper.jar
+/src/lr15/spring_rest_service_log/.mvn/wrapper/maven-wrapper.jar
+/src/lr15/spring_hello_world/.mvn/wrapper/maven-wrapper.properties
+/src/lr15/spring_rest_service/.mvn/wrapper/maven-wrapper.properties
+/src/lr15/spring_rest_service_log/.mvn/wrapper/maven-wrapper.properties
+/src/lr15/spring_hello_world/mvnw
+/src/lr15/spring_rest_service/mvnw
+/src/lr15/spring_rest_service_log/mvnw
+/src/lr15/spring_hello_world/mvnw.cmd
+/src/lr15/spring_rest_service/mvnw.cmd
+/src/lr15/spring_rest_service_log/mvnw.cmd
+/src/lr15/spring_hello_world/pom.xml
+/src/lr15/spring_rest_service/pom.xml
+/src/lr15/spring_rest_service_log/pom.xml
+/src/lr15/spring_hello_world/src/test/java/com/example/spring_hello_world/SpringHelloWorldApplicationTests.java
+/src/lr15/spring_rest_service/src/test/java/com/example/spring_rest_service/SpringRestServiceApplicationTests.java
+/src/lr15/spring_rest_service_log/src/test/java/com/example/spring_rest_service_log/SpringRestServiceLogApplicationTests.java
+/src/lr15/spring_hello_world/.mvn/wrapper/maven-wrapper.jar
+/src/lr15/spring_rest_service/.mvn/wrapper/maven-wrapper.jar
+/src/lr15/spring_rest_service_log/.mvn/wrapper/maven-wrapper.jar

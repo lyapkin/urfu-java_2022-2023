@@ -5,16 +5,25 @@ import java.util.*;
 public class Remove {
     static int n = 11 * 1000000;
     public static void main(String[] args) {
-        List<Integer> arrayList = new ArrayList<>(Collections.nCopies(n, 0));
-        Deque<Integer> arrayDeque = new ArrayDeque<>(Collections.nCopies(n, 0));
+        List<Integer> arrayList = new ArrayList<>();
+        Deque<Integer> arrayDeque = new ArrayDeque<>();
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        for (int i = 0; i < n; i++) {
+            treeMap.put(i, i);
+            arrayList.add(i);
+            arrayDeque.add(i);
+        }
 
         System.out.println("Время выполнения операции удаления в начале arrayList = " + getRunningTimeBegin(arrayList));
         System.out.println("Время выполнения операции удаления в начале arrayDeque = " + getRunningTimeBegin(arrayDeque));
+        System.out.println("Время выполнения операции удаления в начале treeMap = " + getRunningTimeBegin(treeMap));
 
         System.out.println("Время выполнения операции удаления в конеце arrayList = " + getRunningTimeEnd(arrayList));
         System.out.println("Время выполнения операции удаления в конеце arrayDeque = " + getRunningTimeEnd(arrayDeque));
+        System.out.println("Время выполнения операции удаления в конеце treeMap = " + getRunningTimeEnd(treeMap));
 
         System.out.println("Время выполнения операции удаления в середине arrayList = " + getRunningTimeMid(arrayList));
+        System.out.println("Время выполнения операции удаления в середине treeMap = " + getRunningTimeMid(treeMap));
     }
 
     private static long getRunningTimeBegin(List<Integer> list){
@@ -37,6 +46,20 @@ public class Remove {
 
         // блок кода в котором выполняется операция добавления
         deque.removeFirst();
+
+        // точка окончания отсчета времени выполнения программы
+        long end = System.currentTimeMillis();
+
+        // вывод в консоль времени выполнения блока кода содержащего операцию
+        return end - start;
+    }
+
+    private static long getRunningTimeBegin(TreeMap<Integer, Integer> treeMap){
+        // точка начала отсчета времени выполнения программы
+        long start = System.currentTimeMillis();
+
+        // блок кода в котором выполняется операция добавления
+        treeMap.pollFirstEntry();
 
         // точка окончания отсчета времени выполнения программы
         long end = System.currentTimeMillis();
@@ -73,12 +96,40 @@ public class Remove {
         return end - start;
     }
 
+    private static long getRunningTimeEnd(TreeMap<Integer, Integer> treeMap){
+        // точка начала отсчета времени выполнения программы
+        long start = System.currentTimeMillis();
+
+        // блок кода в котором выполняется операция добавления
+        treeMap.pollLastEntry();
+
+        // точка окончания отсчета времени выполнения программы
+        long end = System.currentTimeMillis();
+
+        // вывод в консоль времени выполнения блока кода содержащего операцию
+        return end - start;
+    }
+
     private static long getRunningTimeMid(List<Integer> list){
         // точка начала отсчета времени выполнения программы
         long start = System.currentTimeMillis();
 
         // блок кода в котором выполняется операция добавления
         list.remove(n/2);
+
+        // точка окончания отсчета времени выполнения программы
+        long end = System.currentTimeMillis();
+
+        // вывод в консоль времени выполнения блока кода содержащего операцию
+        return end - start;
+    }
+
+    private static long getRunningTimeMid(SortedMap<Integer, Integer> treeMap){
+        // точка начала отсчета времени выполнения программы
+        long start = System.currentTimeMillis();
+
+        // блок кода в котором выполняется операция добавления
+        treeMap.remove(n/2);
 
         // точка окончания отсчета времени выполнения программы
         long end = System.currentTimeMillis();
